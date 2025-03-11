@@ -76,21 +76,21 @@ classDiagram
         +string Major
         +Person(string name, string major)
     }
-    
+
     class Student {
         +string ID
         +double Grade
         +Advisor Advisor
         +Student(string id, string name, string major, double grade, Advisor advisor)
     }
-    
+
     class Advisor {
         +List~Student~ Students
         +Advisor(string name, string major)
         +void AddStudent(Student student)
         +string GetStudentList()
     }
-    
+
     class Form1 {
         -List~Student~ students
         -List~Advisor~ advisors
@@ -105,10 +105,10 @@ classDiagram
 
     Person <|-- Student
     Person <|-- Advisor
-    Advisor "1" -- "*" Student : advises
-    Form1 "1" -- "*" Student : manages
-    Form1 "1" -- "*" Advisor : manages
-'''
+    Advisor "1" o-- "many" Student : advises
+    Form1 "1" o-- "many" Advisor : manages
+    Form1 "1" o-- "many" Student : manages
+```
 
 
 
