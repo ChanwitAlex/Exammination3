@@ -1,0 +1,16 @@
+D:\งาน\Exammination3\bin\Debug\net8.0-windows\Exammination3.exe
+D:\งาน\Exammination3\bin\Debug\net8.0-windows\Exammination3.deps.json
+D:\งาน\Exammination3\bin\Debug\net8.0-windows\Exammination3.runtimeconfig.json
+D:\งาน\Exammination3\bin\Debug\net8.0-windows\Exammination3.dll
+D:\งาน\Exammination3\bin\Debug\net8.0-windows\Exammination3.pdb
+D:\งาน\Exammination3\obj\Debug\net8.0-windows\Exammination3.Form1.resources
+D:\งาน\Exammination3\obj\Debug\net8.0-windows\Exammination3.csproj.GenerateResource.cache
+D:\งาน\Exammination3\obj\Debug\net8.0-windows\Exammination3.GeneratedMSBuildEditorConfig.editorconfig
+D:\งาน\Exammination3\obj\Debug\net8.0-windows\Exammination3.AssemblyInfoInputs.cache
+D:\งาน\Exammination3\obj\Debug\net8.0-windows\Exammination3.AssemblyInfo.cs
+D:\งาน\Exammination3\obj\Debug\net8.0-windows\Exammination3.csproj.CoreCompileInputs.cache
+D:\งาน\Exammination3\obj\Debug\net8.0-windows\Exammination3.dll
+D:\งาน\Exammination3\obj\Debug\net8.0-windows\refint\Exammination3.dll
+D:\งาน\Exammination3\obj\Debug\net8.0-windows\Exammination3.pdb
+D:\งาน\Exammination3\obj\Debug\net8.0-windows\Exammination3.genruntimeconfig.cache
+D:\งาน\Exammination3\obj\Debug\net8.0-windows\ref\Exammination3.dll
