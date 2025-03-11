@@ -68,37 +68,47 @@ Grade: คะแนนเกรด (ตัวเลขทศนิยม)
 
 7.กดที่ชื่อนักศึกษาใน ListBox เพื่อแสดงข้อมูลรายละเอียดของนักศึกษานั้น ๆ
 # class diagram
+
 ```mermaid
-digraph G {
-    rankdir=TB;
+classDiagram
+    class Person {
+        +string Name
+        +string Major
+        +Person(string name, string major)
+    }
+    
+    class Student {
+        +string ID
+        +double Grade
+        +Advisor Advisor
+        +Student(string id, string name, string major, double grade, Advisor advisor)
+    }
+    
+    class Advisor {
+        +List~Student~ Students
+        +Advisor(string name, string major)
+        +void AddStudent(Student student)
+        +string GetStudentList()
+    }
+    
+    class Form1 {
+        -List~Student~ students
+        -List~Advisor~ advisors
+        +Form1()
+        +void LoadAdvisors()
+        +void btnAddstudent_Click()
+        +void btnShowStuent_Click()
+        +void UpdateStudentList()
+        +void lstStudent_SelectedIndexChanged()
+        +void btnShowAll_Click()
+    }
 
-    Person [
-        label="Person|Name: string\nMajor: string|+ToString(): string",
-        shape=record
-    ];
-
-    Student [
-        label="Student|StudentID: string\nGrade: double\nAdvisor: Advisor|+ToString(): string",
-        shape=record
-    ];
-
-    Advisor [
-        label="Advisor|Students: List<Student>|+AddStudent(Student): void\n+ToString(): string",
-        shape=record
-    ];
-
-    Program [
-        label="Program|Students: List<Student>\nAdvisors: List<Advisor>|+AddStudent(Student): void\n+AddAdvisor(Advisor): void\n+GetStudents(): List<Student>\n+GetAdvisors(): List<Advisor>",
-        shape=record
-    ];
-
-    Person -> Student [arrowhead="open", label="Inheritance"];
-    Person -> Advisor [arrowhead="open", label="Inheritance"];
-    Advisor -> Student [arrowhead="open", label="Association"];
-    Program -> Student [arrowhead="open", label="Aggregation"];
-    Program -> Advisor [arrowhead="open", label="Aggregation"];
-}
-
+    Person <|-- Student
+    Person <|-- Advisor
+    Advisor "1" -- "*" Student : advises
+    Form1 "1" -- "*" Student : manages
+    Form1 "1" -- "*" Advisor : manages
+'''
 
 
 
